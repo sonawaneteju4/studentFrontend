@@ -24,7 +24,7 @@ const Register = () => {
     e.preventDefault();
     try {
       let res = await fetch(
-        "http://localhost:5000/api/studentRoutes/postresponce",
+        "https://studentbackend-production-b08e.up.railway.app/api/studentRoutes/postresponce",
         {
           method: "POST",
           headers: {

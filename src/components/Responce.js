@@ -3,7 +3,7 @@ import UpdateModal from "./UpdateModal";
 
 const Responce = () => {
   
-  const API = "http://localhost:5000/api/studentRoutes/students";
+  const API = "https://studentbackend-production-b08e.up.railway.app/api/studentRoutes/students";
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [students, setStudents] = useState([]);
@@ -36,7 +36,7 @@ const Responce = () => {
   const handleUpdate = async (updatedStudentData) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/studentRoutes/updatestudent/${updatedStudentData._id}`,
+        `https://studentbackend-production-b08e.up.railway.app/api/studentRoutes/updatestudent/${updatedStudentData._id}`,
         {
           method: "PUT",
           headers: {
@@ -67,7 +67,7 @@ const Responce = () => {
   const deleteStudent = async (id) => {
     try {
       await fetch(
-        `http://localhost:5000/api/studentRoutes/deletstudent/${id}`,
+        `https://studentbackend-production-b08e.up.railway.app/api/studentRoutes/deletstudent/${id}`,
         {
           method: "DELETE",
         }
@@ -80,7 +80,7 @@ const Responce = () => {
   return (
     <div>
       <div
-        className="lg:h-screen bg-cover "
+        className="bg-scroll bg-cover "
         style={{ backgroundImage: `url("/bg.jpg")` }}
       >
         <div className="h-10  font-serif backdrop-sepia-0 bg-white/30   backdrop-blur-sm drop-shadow-xl text-black text-center font-bold text-3xl">
@@ -121,7 +121,7 @@ const Responce = () => {
                       setSelectedStudent(items);
                       openModal();
                     }}
-                    className="m-2 p-1 px-3 backdrop-sepia-0 bg-yellow-200/50 font-serif font-semibold hover:bg-yellow-400/100 backdrop-blur-sm drop-shadow-xl  bg-white"
+                    className="m-2 p-1 px-3 backdrop-sepia-0 bg-teal-200/50 font-serif font-semibold hover:bg-teal-400/50 backdrop-blur-sm drop-shadow-xl "
                   >
                     Update Details
                   </button>
@@ -129,7 +129,7 @@ const Responce = () => {
                 <div>
                   <button
                     onClick={() => deleteStudent(items._id)}
-                    className="m-2 p-1 px-3 backdrop-sepia-0 bg-red-400/50 font-serif font-semibold hover:bg-red-700/100 backdrop-blur-sm drop-shadow-xl  bg-white"
+                    className="m-2 p-1 px-3 backdrop-sepia-0 bg-red-400/50 font-serif font-semibold hover:bg-red-700/100 backdrop-blur-sm drop-shadow-xl  "
                   >
                     Delete
                   </button>

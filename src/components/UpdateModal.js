@@ -21,7 +21,7 @@ const UpdateModal = ({ selectedStudent, onClose, onUpdate }) => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await fetch(`http://localhost:5000/api/studentRoutes/updatestudent/${updatedStudent._id}`, {
+        const response = await fetch(`https://studentbackend-production-b08e.up.railway.app/api/studentRoutes/updatestudent/${updatedStudent._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -190,7 +190,7 @@ const UpdateModal = ({ selectedStudent, onClose, onUpdate }) => {
           <div>
             <button
               type="submit"
-              className="m-5 p-3 px-5 backdrop-sepia-0 bg-white/50 font-serif font-semibold hover:bg-white/100 backdrop-blur-sm drop-shadow-xl  bg-white"
+              className="m-5 p-3 px-5 backdrop-sepia-5 bg-slate-800/50 hover:bg-slate-800/30 backdrop-blur-sm drop-shadow-xl  "
             >
               Update
             </button>
@@ -199,7 +199,7 @@ const UpdateModal = ({ selectedStudent, onClose, onUpdate }) => {
             <button
               type="reset"
               onClick={handleClose}
-              className="m-5 p-3 px-5 backdrop-sepia-0 bg-white/50 font-serif font-semibold hover:bg-white/100 backdrop-blur-sm drop-shadow-xl  bg-white"
+              className="m-5 p-3 px-5 backdrop-sepia-0 bg-slate-800/50  hover:bg-slate-800/30 backdrop-blur-sm drop-shadow-xl  "
             >
               Cancel
             </button>
