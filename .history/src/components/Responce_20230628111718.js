@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import UpdateModal from "./UpdateModal";
-import Spinner from "./Spinner";
 
 const Responce = () => {
   
@@ -27,7 +26,6 @@ const Responce = () => {
       const res = await fetch(url);
       const data = await res.json();
       setstudent(data);
-      setLoading(false);
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -152,7 +150,6 @@ const Responce = () => {
           onUpdate={handleUpdate}
         />
       )}
-      {loading && <Spinner  />}
     </div>
   );
 };

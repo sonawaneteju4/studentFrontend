@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import UpdateModal from "./UpdateModal";
-import Spinner from "./Spinner";
 
 const Responce = () => {
   
@@ -152,7 +151,6 @@ const Responce = () => {
           onUpdate={handleUpdate}
         />
       )}
-      {loading && <Spinner  />}
     </div>
   );
 };

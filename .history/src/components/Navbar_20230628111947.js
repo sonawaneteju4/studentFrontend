@@ -18,14 +18,14 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="pr-5 flex">
-          <span className="p-1">
+          <span className="p-2">
             <RxPencil2 />
           </span>
 
           <Link to="/register">Register</Link>
         </li>
         <li className="pr-5 flex">
-          <span className="p-1">
+          <span className="p-2">
             <SiPagespeedinsights />
           </span>
           <Link to="/responce">Responces</Link>

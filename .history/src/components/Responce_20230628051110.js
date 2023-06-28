@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import UpdateModal from "./UpdateModal";
-import Spinner from "./Spinner";
 
 const Responce = () => {
   
@@ -9,8 +8,6 @@ const Responce = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [students, setStudents] = useState([]);
   const [student, setstudent] = useState([]);
-  const [loading, setLoading] = useState(true);
-
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -23,11 +20,9 @@ const Responce = () => {
 
   const fetchApiData = async (url) => {
     try {
-      setLoading(true);
       const res = await fetch(url);
       const data = await res.json();
       setstudent(data);
-      setLoading(false);
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -152,7 +147,6 @@ const Responce = () => {
           onUpdate={handleUpdate}
         />
       )}
-      {loading && <Spinner  />}
     </div>
   );
 };
