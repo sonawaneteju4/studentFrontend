@@ -152,7 +152,7 @@ const Responce = () => {
           onUpdate={handleUpdate}
         />
       )}
-      {loading && <Spinner/>}
+      {loading && <Spinner  />}
     </div>
   );
 };

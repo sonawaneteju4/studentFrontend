@@ -16,8 +16,8 @@ function App() {
    <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route  exact path='/responce' element={<Response/>}/>
-        <Route exact path='/register' element={<Register/>}/>
+        <Route  ex path='/responce' element={<Response/>}/>
+        <Route ex path='/register' element={<Register/>}/>
       </Routes>
     </BrowserRouter>
 
